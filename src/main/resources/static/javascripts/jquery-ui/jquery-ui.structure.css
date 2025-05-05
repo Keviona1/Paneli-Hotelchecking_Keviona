@@ -200,6 +200,10 @@
 	left: 0;
 	cursor: default;
 }
+.ui-menu-item-wrapper:hover {
+	background-color: #f0f0f0 !important; /* or any color you want */
+}
+
 .ui-menu {
 	list-style: none;
 	padding: 0;
@@ -230,6 +234,7 @@
 .ui-menu .ui-state-focus,
 .ui-menu .ui-state-active {
 	margin: -1px;
+	background: black;
 }
 
 /* icon support */

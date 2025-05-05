@@ -20563,7 +20563,7 @@ div.tagsinput span.tag a {
     font-size: 1rem;
     line-height: 1;
     margin-right: 1rem;
-    color: #6C7383;
+    color:#F26924 !important;
 }
 
 .rtl .sidebar .nav .nav-item .nav-link i.menu-icon {

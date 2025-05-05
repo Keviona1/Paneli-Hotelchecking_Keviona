@@ -162,7 +162,7 @@
                                                    th:value="${search}" th:placeholder="#{client.SearchFacilities}" onkeypress="return event.key !== 'Enter';">
                                         </div>
                                         <div class="col-5 col-lg-9">
-                                            <button type="submit" class="btn btn-primary">[[#{client.Search}]] </button>
+                                            <button type="submit" class="btn btn-primary search-btn">[[#{client.Search}]] </button>
                                         </div>
                                     </div>
                                 </form>
@@ -248,7 +248,7 @@
                     "data": null,
                     "render": function (data, type, row) {
                         return `
-                        <button class="btn btn-outline-danger btn-sm btn-icon-text button1 mr-3 delete-facility"
+                        <button class="btn btn-outline-danger btn-sm btn-icon-text button1 mr-3 delete-facility "
                                 style="padding: 0.5rem 0.81rem;" type="button"
                                 data-id="${data.id}">
                             [[#{client.Delete}]]<i class="ti-alert btn-icon-prepend"></i>

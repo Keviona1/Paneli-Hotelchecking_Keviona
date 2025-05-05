@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Promotion Types | Admin Panel Allbookers</title>
+    <title>Promotion Types | Admin Panel HotelsChecking</title>
 
     <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
     <link rel="stylesheet" href="../../css/style.css">
@@ -42,12 +42,12 @@
                                 <tr class="table-head">
                                     <th>[[#{client.PromotionName}]]</th>
                                     <th>[[#{client.Photo}]]</th>
-                                    <th style="width: 180px;">[[#{client.RecommendedDiscount}]]</th>
+                                    <th>[[#{client.RecommendedDiscount}]]</th>
                                     <th>[[#{client.Category}]]</th>
-                                    <th style="width: 25%;">[[#{client.Description}]]</th>
+                                    <th>[[#{client.Description}]]</th>
                                     <th>[[#{client.Suggestedbookingperiod}]]</th>
-                                    <th style="width: 100px; text-align: center;">[[#{client.Active}]]</th>
-                                    <th style="width: 110px; text-align: center;">[[#{client.Actions}]]</th>
+                                    <th style="text-align: center;">[[#{client.Active}]]</th>
+                                    <th style="text-align: center;">[[#{client.Actions}]]</th>
                                 </tr>
                                 </thead>
                                 <tbody      >
@@ -102,6 +102,12 @@
     .table {
         margin-bottom: 0;
     }
+@media(max-width:1000px){
+    .description-cell{
+        width: 400px !important;
+    }
+}
+
 </style>
 <script src="../../js/sweetAlert.js"></script>
 <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>

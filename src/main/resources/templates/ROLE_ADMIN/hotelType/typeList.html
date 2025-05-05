@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Property Type | Admin Panel Allbookers</title>
+    <title>Property Type | Admin Panel HotelsChecking</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="../../vendors/feather/feather.css">
@@ -91,7 +91,7 @@
                                 <span ${falseConnectedDisplay}>[[#{client.FalseConnected}]]</span>
                             </td>
                             <td>
-                                <a ${hotelTypeMap.propertyListSize === 0 ? 'disabled' : ''} href="/delete_propertyType/${hotelTypeMap.id}" class="btn btn-outline-danger btn-sm btn-icon-text">[[#{client.Delete}]]</a>
+                                <a ${hotelTypeMap.propertyListSize === 0 ? 'disabled' : ''} href="/delete_propertyType/${hotelTypeMap.id}" class="btn btn-outline-danger btn-sm btn-icon-text">[[#{client.Delete}]] <i class="ti-alert btn-icon-prepend"></i></a>
                                 <button type="button" onclick="goToEditPropertyType(${hotelTypeMap.id});" class="btn btn-primary btn-sm btn-icon-text">[[#{client.Edit}]]<i class="ti-file btn-icon-append allb-nn"></i></button>
                             </td>
                         </tr>
@@ -194,6 +194,69 @@
         font-weight: 600;
     }
     .fix-top-content{padding-top: 100px;}
+
+    .dataTables_filter input {
+        border: 1px solid #ddd;
+        padding: 10px 10px 10px 20px;
+        border-radius: 5px;
+        width: 100%;
+
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        color: #333;
+    }
+
+    .dataTables_filter .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .dataTables_filter svg {
+        position: absolute;
+        left: 20px;
+        width: 16px;
+        height: 16px;
+        fill: #aaa;
+    }
+
+
+    .dataTables_filter input {
+        padding-left: 40px;
+    }
+
+    div.table-responsive > div.dataTables_wrapper > div.row {
+        display: flex;
+    }
+    .dataTables_filter input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+
+
+    .dataTables_filter input {
+        padding-left: 40px;
+    }
+
+
+    .dataTables_filter input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    .button1 {
+        padding: 0.5rem 0.85rem !important;
+    }
+    .dataTables_length{
+margin-bottom: -50px;
+    }
+    @media (max-width: 767px) {
+        .dataTables_length{
+            margin-bottom: 0px !important;
+        }
+    }
 </style>
 
 <script>

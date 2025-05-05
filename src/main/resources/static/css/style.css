@@ -173,3 +173,35 @@ a.bookers-colorr:hover{
     color: #ffffff;
     font-size: 14px;
 }
+.btn-primary, .wizard > .actions a {
+    color: #fff;
+    background-color: #0089CC;
+    border-color: #0089CC;
+    padding: 0.5rem 0.85rem !important;
+}
+.btn-outline-danger {
+    color: #FF4747;
+    border-color: #FF4747;
+    padding: 0.5rem 0.85rem !important;
+
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #F8F6F2;
+}
+.table-striped tbody tr:nth-of-type(even):hover {
+    background-color: #F6F1E9;
+}
+.dataTables_paginate .paginate_button.current {
+    background-color:#0089CC !important;
+    color: white;
+}
+.search-btn{
+    padding: 1rem 1.5rem !important;
+    border-radius: 6px !important;
+}
+/* Change background color of the active (hovered or keyboard-selected) item */
+.ui-menu .ui-menu-item:hover a{
+    background: #FFF0ED !important;
+    color: black !important;
+    border: 1px solid #3d98fd;
+}

@@ -59,7 +59,7 @@
                                             <input type="text" id="search" name="search" class="form-control form-control-navS" th:value="${search}" th:placeholder="#{client.EnterCityName}" required  onkeypress=" return event.key !== 'Enter';">
                                         </div>
                                         <div class="col-4 col-lg-9">
-                                            <button type="submit" class="btn btn-primary">[[#{client.search}]]</button>
+                                            <button type="submit" class="btn btn-primary search-btn">[[#{client.search}]]</button>
                                         </div>
                                     </div>
                                 </form>
@@ -402,7 +402,7 @@
 
                         const  deleteButton = `
                         <a style="padding: 0.5rem 0.81rem" class="btn btn-outline-danger btn-sm" value="${data.id}" onclick="delete_city(${data.id})">
-                            <i class="ti-alert btn-icon-prepend"></i> ${deleteButtonText}
+                            ${deleteButtonText}  <i class="ti-alert btn-icon-prepend"></i>
                         </a>`;
 
 

@@ -409,22 +409,21 @@ public class PanelMainController {
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/countryList")
-    public ModelAndView shihShtet(HttpServletRequest request, ModelAndView modelAndView
-                                 /*, @RequestParam(defaultValue = "1") int page,
-                                  @RequestParam(defaultValue = "10") int size,
-                                  @RequestParam(required = false) String search*/) {
-        if (request.isUserInRole("ROLE_ADMIN")){
-            //ketu pagination nuk nevojitet
-           /* Pageable pageable = PageRequest.of(page - 1, size);
+    public ModelAndView shihShtet(HttpServletRequest request, ModelAndView modelAndView,
+                                                            @RequestParam(required = false) String search,
+                                  @RequestParam(required = false) Long id) {
+        if (request.isUserInRole("ROLE_ADMIN")) {
             List<Country> countries;
+
             if (search != null && !search.isEmpty()) {
                 countries = countryRepository.findByCountry_nameContainingIgnoreCase(search);
             } else {
-                countries = countryRepository.findAllCountries();
-            }*/
+                countries = countryRepository.findAll();
+            }
 
-            modelAndView.addObject("country", countryRepository.findAll());
-            /*modelAndView.addObject("search", search);*/
+            modelAndView.addObject("country", countries);
+            modelAndView.addObject("search", search);
+            modelAndView.addObject("id", id);
             modelAndView.setViewName("ROLE_ADMIN/country/countryList");
         }
         return modelAndView;
